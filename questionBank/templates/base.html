@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>刷题系统</title>
+    {% endblock %}
+</head>
+<body>
+    {% for message in get_flashed_messages() %}
+        <div class="alert">{{ message }}</div>
+    {% endfor %}
+    <h2>
+        二中信息技术刷题系统
+    </h2>
+
+    {% block content %}{% endblock %}
+    <footer>
+        <small>&copy; 2020<a href="http://60.191.178.98:88/">温岭二中校网</a></small>
+    </footer>
+</body>
+</html>>
