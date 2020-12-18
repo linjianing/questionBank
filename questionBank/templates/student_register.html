@@ -11,14 +11,14 @@
     <input type="text" name="grade" list="gradeslist" placeholder="请选择年级"><br><br>
     <datalist id="gradeslist">
         {% for grade in grades %}
-        <option>{{ grade }}</option>
+            <option>{{ grade }}</option>
         {% endfor %}
     </datalist>
     班级<br>
     <input type="text" mame="class_num" list="classnumslist" placeholder="请选择班级"><br><br>
     <datalist id="classnumslist">
         {% for classnum in classnums %}
-        <option>{{ classnum }}</option>
+            <option>{{ classnum }}</option>
         {% endfor %}
     </datalist>
     密码<br>

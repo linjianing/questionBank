@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>add question</h3>
+<form action="{{ url_for('add_question_pre') }}" method="post">
+
+    <label for="category">类别</label>
+    <input id="category" type="text" name="category" list="categorylist" placeholder="请选择类别"><br><br>
+    <datalist id="categorylist">
+        {% for category in subject_category %}
+            <option>{{ category }}</option>
+        {% endfor %}
+    </datalist>
+<!--    <label for="question">题目（图片形式）</label>-->
+<!--    <input id="question" type="file" name="file"/>-->
+    <label for="question_type">选择题目类型</label>
+    {% for question_type in question_types %}
+        <input id="question_type" type="radio" name="question_type" value="{{ question_type.value }}">{{ question_type.name }}
+    {% endfor %}
+    <br>
+    <label for="question_num">输入题目数量</label>
+    <input id="question_num" type="number" name="question_num">
+    <input class="btn" type="submit" name="submit" value="添加">
+</form>
+{% endblock %}

@@ -40,3 +40,14 @@ class Teacher(db.Model, UserMixin):
         return check_password_hash(self.password_hash, password)
 
 
+class Question(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    belong_subject = db.Column(db.String(10))
+    category = db.Column(db.String(20))
+    question_type = db.Column(db.String(10))
+    question = db.Column(db.PickleType)
+    answer = db.Column(db.PickleType)  # 以字典形式存储，key为小题号，value为具体答案值
+    grade = db.Column(db.PickleType)
+
+    def get_grade(self, answer):
+        pass
