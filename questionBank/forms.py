@@ -1,7 +1,9 @@
-from flask_wtf import form, validators
-from wtforms import StringField, FileField
+from flask_wtf import FlaskForm
+from flask_ckeditor import CKEditorField
+from wtforms import StringField, FileField, SubmitField
 
 
-class QuestionForm(form):
-    category = StringField('类别', [validators.length(max=20)])
-    question = FileField('选择题目（图片形式）', [validators])
+class QuestionForm(FlaskForm):
+    title = StringField('Title')
+    question_body = CKEditorField('Body')
+    submit = SubmitField('Submit')

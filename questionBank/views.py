@@ -1,7 +1,8 @@
 import os
 import time
 
-from flask import request, url_for, flash, render_template, make_response
+from flask import request, url_for, flash, render_template, make_response, send_from_directory, current_app
+from flask_ckeditor import upload_fail, upload_success
 from flask_login import current_user, login_required, login_user, logout_user
 from werkzeug.utils import redirect, secure_filename
 from werkzeug.security import generate_password_hash
@@ -9,6 +10,7 @@ from werkzeug.security import generate_password_hash
 from questionBank import app, db
 from questionBank.models import User, Teacher, Question
 from questionBank.commons import grades, classnums, subject_lists, subject_category_dict, QuestionTypes
+from questionBank.forms import QuestionForm
 
 
 @app.route('/studentRegister', methods=['GET', 'POST'])
@@ -111,8 +113,9 @@ def add_question_pre():
         category = request.form.get('category')
         question_type = request.form.get('question_type')
         question_num = int(request.form.get('question_num'))
+        question_form = QuestionForm()
         return render_template('question_modified_pages/question_add.html', category=category,
-                               question_type=question_type, question_num=question_num)
+                               question_type=question_type, question_num=question_num, form=question_form)
 
 
 @app.route('/add_question/<question_num>/<question_type>', methods=['GET', 'POST'])
@@ -148,3 +151,23 @@ def add_question(question_num, question_type):
         return render_template('teacher_index.html')
     else:
         pass
+
+
+@app.route('/file/<filename>')
+def uploaded_files(filename):
+    path = os.path.join(current_app.name, 'static', current_app.config['CKEDITOR_FILE_UPLOADER'])
+    return send_from_directory(path, filename)
+
+
+@app.route('/upload', methods=['POST'])
+def upload():
+    f = request.files.get('upload')  # 获取上传图片文件对象
+    # Add more validations here
+    extension = f.filename.split('.')[1].lower()
+    print(extension)
+    upload_path = os.path.join(current_app.name, 'static', current_app.config['CKEDITOR_FILE_UPLOADER'])
+    if extension not in ['jpg', 'gif', 'png', 'jpeg']:  # 验证文件类型示例
+        return upload_fail(message='Image only!')  # 返回upload_fail调用
+    f.save(os.path.join(upload_path, f.filename))
+    url = url_for('uploaded_files', filename=f.filename)
+    return upload_success(url=url) # 返回upload_success调用

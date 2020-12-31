@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46ec96b8-3958-413a-9284-49d92180cef1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/questionBank/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/commands.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/commons.py" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/commons.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/data.db" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/data.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/templates/student_register.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/student_register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/templates/teacher_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/teacher_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/templates/teacher_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/teacher_login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/templates/question_modified_pages/question_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/question_modified_pages/question_add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/questionBank/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,43 +34,46 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../test" />
+    <property name="last_opened_file_path" value="D:/program files/python/Lib/site-packages/flask" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ljn\project\pythonProject\flaskWebApplication\questionBankSystem\questionBank\static\javascript" />
       <recent name="D:\ljn\project\pythonProject\flaskWebApplication\questionBankSystem\questionBank\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ljn\project\pythonProject\flaskWebApplication\questionBankSystem\questionBank\static\javascript" />
+      <recent name="D:\ljn\project\pythonProject\flaskWebApplication\questionBankSystem\questionBank\static" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="questionBank" type="PythonConfigurationType" factoryName="Python">
       <module name="questionBankSystem" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="FLASK_APP" value="questionBank" />
+        <env name="FLASK_ENV" value="development" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/questionBank" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/questionBank/views.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="SCRIPT_NAME" value="flask" />
+      <option name="PARAMETERS" value="run" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
+      <option name="MODULE_MODE" value="true" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.views" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -95,62 +94,78 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607082033088">
+    <state x="652" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609397614333">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="180" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607082033088" />
+    <state x="652" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609397614333" />
     <state x="348" y="336" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606478415654">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="348" y="336" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606478415654" />
-    <state x="761" y="287" key="FileChooserDialogImpl" timestamp="1607859988746">
+    <state x="890" y="250" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1609396094141">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="761" y="287" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607859988746" />
-    <state width="1735" height="279" key="GridCell.Tab.0.bottom" timestamp="1607346610708">
+    <state x="890" y="250" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609396094141" />
+    <state x="1025" y="300" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1609397475333">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1735" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607346610708" />
-    <state width="1735" height="279" key="GridCell.Tab.0.center" timestamp="1607346610708">
+    <state x="1025" y="300" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609397475333" />
+    <state x="430" y="360" key="#xdebugger.evaluate" timestamp="1609399026198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1735" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607346610708" />
-    <state width="1735" height="279" key="GridCell.Tab.0.left" timestamp="1607346610708">
+    <state x="430" y="360" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1609399026198" />
+    <state x="877" y="307" key="EnvironmentVariablesDialog" timestamp="1609392974802">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1735" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607346610708" />
-    <state width="1735" height="279" key="GridCell.Tab.0.right" timestamp="1607346610708">
+    <state x="877" y="307" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609392974802" />
+    <state x="1016" y="372" key="FileChooserDialogImpl" timestamp="1609397154909">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1735" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607346610708" />
-    <state width="1273" height="279" key="GridCell.Tab.1.bottom" timestamp="1607341644870">
+    <state x="1016" y="372" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609397154909" />
+    <state width="1091" height="277" key="GridCell.Tab.0.bottom" timestamp="1609399528023">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1273" height="279" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607341644870" />
-    <state width="1273" height="279" key="GridCell.Tab.1.center" timestamp="1607341644870">
+    <state width="1091" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609399528023" />
+    <state width="1091" height="277" key="GridCell.Tab.0.center" timestamp="1609399528023">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1273" height="279" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607341644870" />
-    <state width="1273" height="279" key="GridCell.Tab.1.left" timestamp="1607341644870">
+    <state width="1091" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609399528023" />
+    <state width="1091" height="277" key="GridCell.Tab.0.left" timestamp="1609399528023">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1273" height="279" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607341644870" />
-    <state width="1273" height="279" key="GridCell.Tab.1.right" timestamp="1607341644870">
+    <state width="1091" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609399528023" />
+    <state width="1091" height="277" key="GridCell.Tab.0.right" timestamp="1609399528023">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1273" height="279" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607341644870" />
+    <state width="1091" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609399528023" />
+    <state width="1091" height="277" key="GridCell.Tab.1.bottom" timestamp="1609399528024">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1091" height="277" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609399528024" />
+    <state width="1091" height="277" key="GridCell.Tab.1.center" timestamp="1609399528024">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1091" height="277" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609399528024" />
+    <state width="1091" height="277" key="GridCell.Tab.1.left" timestamp="1609399528024">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1091" height="277" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609399528024" />
+    <state width="1091" height="277" key="GridCell.Tab.1.right" timestamp="1609399528024">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1091" height="277" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609399528024" />
     <state x="603" y="215" key="SettingsEditor" timestamp="1607299034383">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="603" y="215" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607299034383" />
-    <state x="632" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1607079932578">
+    <state x="632" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1609151796538">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="632" y="366" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607079932578" />
-    <state x="1141" y="344" width="626" height="490" key="find.popup" timestamp="1607780533002">
+    <state x="632" y="366" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609151796538" />
+    <state x="1141" y="344" width="626" height="490" key="find.popup" timestamp="1609154073019">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1141" y="344" width="626" height="490" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607780533002" />
+    <state x="1141" y="344" width="626" height="490" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1609154073019" />
     <state x="1120" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1607775688199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -161,8 +176,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/questionBank/views.py</url>
-          <line>139</line>
-          <option name="timeStamp" value="1" />
+          <line>158</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>刷题系统</title>
     {% endblock %}
+    {% block style %}{% endblock %}
 </head>
 <body>
     {% for message in get_flashed_messages() %}
@@ -21,5 +22,6 @@
     <footer>
         <small>&copy; 2020<a href="http://60.191.178.98:88/">温岭二中校网</a></small>
     </footer>
+    {% block js %}{% endblock %}
 </body>
 </html>>

@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_ckeditor import CKEditor
 import os
 import sys
 
@@ -12,6 +13,7 @@ else:
     prefix = 'sqlite:////'
 
 app = Flask(__name__)
+ckeditor = CKEditor(app)
 app.debug = True
 
 app.config['SQLALCHEMY_DATABASE_URI'] = prefix + os.path.join(app.root_path, os.getenv('DATABASE_FILE', 'data.db'))
@@ -19,7 +21,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', default='dev')   # used for flask-wtf to avoid csrf attack
 
 # 文件上传路径
-app.config['UPLOAD_FOLDER'] = 'upload'
+app.config['CKEDITOR_FILE_UPLOADER'] = 'upload'
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)

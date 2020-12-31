@@ -1,22 +1,51 @@
 {% extends 'base.html' %}
 
+{% block style %}
+    <style>
+        .toolbar {
+            border: 1px solid #ccc;
+        }
+        .text {
+            border: 1px solid #ccc;
+            min-height: 400px;
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
 <h3>add question</h3>
-<form action="{{ url_for('add_question', question_num=question_num, question_type=question_type) }}" method="post" enctype="multipart/form-data">
+<div>
+    <form method="post">
+        {{ form.title.label }}{{ form.title() }}
+        {{ form.question_body.label }}{{ form.question_body() }}
+        {{ form.submit() }}
+    </form>
+    {{ ckeditor.load() }}
+    {{ ckeditor.config(name='question_body') }}
+</div>
 
-    <label for="category">类别</label>
-    <input id="category" type="text" name="category" value="{{ category }}"><br>
-<!--    <input id="question_num" type="number" name="question_num" value="{{ question_num }}" disabled>><br>-->
-    <label for="question">选择题目（图片形式）</label>
-    <input id="question" type="file" name="file" accept=".jpg,.png"/><br>
-    {% for num in range(question_num) %}
-        {{ "第%d题答案："|format(num+1) }}
-        <input id="question_answer" type="text" name="{{ 'question_answer_%d'|format(num+1) }}">多个答案之间用 | 进行分隔
-        分值：
-        <input id="question_grade" type="number" name="{{ 'question_grade_%d'|format(num+1) }}"><br>
-    {% endfor %}
-    <br>
+<!--<form action="{{ url_for('add_question', question_num=question_num, question_type=question_type) }}" method="post" enctype="multipart/form-data">-->
 
-    <input class="btn" type="submit" name="submit" value="添加题目">
-</form>
+<!--    <label for="category">类别</label>-->
+<!--    <input id="category" type="text" name="category" value="{{ category }}"><br>-->
+<!--&lt;!&ndash;    <input id="question_num" type="number" name="question_num" value="{{ question_num }}" disabled>><br>&ndash;&gt;-->
+<!--    <label for="question">选择题目（图片形式）</label>-->
+<!--    <input id="question" type="file" name="file" accept=".jpg,.png"/><br>-->
+<!--    {% for num in range(question_num) %}-->
+<!--        {{ "第%d题答案："|format(num+1) }}-->
+<!--        <input id="question_answer" type="text" name="{{ 'question_answer_%d'|format(num+1) }}">多个答案之间用 | 进行分隔-->
+<!--        分值：-->
+<!--        <input id="question_grade" type="number" name="{{ 'question_grade_%d'|format(num+1) }}"><br>-->
+<!--    {% endfor %}-->
+<!--    <br>-->
+
+<!--    <input class="btn" type="submit" name="submit" value="添加题目">-->
+<!--</form>-->
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="{{ url_for('static', filename='ckeditor/ckeditor.js') }}"></script>
+    <script type="text/javascript">
+        
+    </script>
 {% endblock %}
