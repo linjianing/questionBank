@@ -80,9 +80,10 @@ def teacher_login():
         teacher_name = request.form.get('teacher_name')
         password = request.form.get('password')
         login_teacher = Teacher.query.filter_by(teacher_name=teacher_name).first()
-        if login_teacher != None and login_teacher.validate_password(password):
+        if login_teacher is not None and login_teacher.validate_password(password):
             resp = make_response(render_template('teacher_index.html'))
             subject = login_teacher.subject
+            resp.set_cookie('teacher', teacher_name)
             resp.set_cookie('subject', subject)
             return resp
         else:
@@ -118,13 +119,19 @@ def add_question_pre():
                                question_type=question_type, question_num=question_num, form=question_form)
 
 
-@app.route('/add_question/<question_num>/<question_type>', methods=['GET', 'POST'])
-def add_question(question_num, question_type):
+@app.route('/add_question/', methods=['GET', 'POST'])
+def add_question():
     """
     新增题目
     :return:
     """
-    if request.method == 'POST':
+    if request.method == 'GET':
+        subject = request.cookies.get('subject')
+        subject_category = subject_category_dict[subject]
+        question_form = QuestionForm()
+        question_form.set_question_category(list(zip(subject_category, subject_category)))
+        return render_template('question_modified_pages/question_add.html', form=question_form)
+    else:
         category = request.form.get('category')
         question = request.files['file']
         base_path = os.path.abspath(os.path.dirname(__file__))
@@ -149,11 +156,9 @@ def add_question(question_num, question_type):
         db.session.commit()
         flash('question created~')
         return render_template('teacher_index.html')
-    else:
-        pass
 
 
-@app.route('/file/<filename>')
+@app.route('/static/upload/<filename>')   # this place is used for the url in the ckeditor textbox
 def uploaded_files(filename):
     path = os.path.join(current_app.name, 'static', current_app.config['CKEDITOR_FILE_UPLOADER'])
     return send_from_directory(path, filename)
@@ -164,10 +169,11 @@ def upload():
     f = request.files.get('upload')  # 获取上传图片文件对象
     # Add more validations here
     extension = f.filename.split('.')[1].lower()
-    print(extension)
-    upload_path = os.path.join(current_app.name, 'static', current_app.config['CKEDITOR_FILE_UPLOADER'])
     if extension not in ['jpg', 'gif', 'png', 'jpeg']:  # 验证文件类型示例
         return upload_fail(message='Image only!')  # 返回upload_fail调用
+    upload_path = os.path.join(current_app.name, 'static', current_app.config['CKEDITOR_FILE_UPLOADER'])
+    if not os.path.exists(upload_path):
+        os.makedirs(upload_path)
     f.save(os.path.join(upload_path, f.filename))
     url = url_for('uploaded_files', filename=f.filename)
-    return upload_success(url=url) # 返回upload_success调用
+    return upload_success(url=url)    # 返回upload_success调用
