@@ -1,15 +1,15 @@
 import os
 import time
 
-from flask import request, url_for, flash, render_template, make_response, send_from_directory, current_app
-from flask_ckeditor import upload_fail, upload_success
+from flask import request, url_for, flash, render_template, make_response, send_from_directory, current_app, jsonify
 from flask_login import current_user, login_required, login_user, logout_user
 from werkzeug.utils import redirect, secure_filename
 from werkzeug.security import generate_password_hash
 
 from questionBank import app, db
 from questionBank.models import User, Teacher, Question
-from questionBank.commons import grades, classnums, subject_lists, subject_category_dict, QuestionTypes
+from questionBank.commons import grades, classnums, subject_lists, subject_category_dict, QuestionTypes, \
+    gen_rnd_filename, question_types
 from questionBank.forms import QuestionForm
 
 
@@ -99,26 +99,6 @@ def teacher_login():
 #     else:
 
 
-@app.route('/add_question_pre', methods=['GET', 'POST'])
-def add_question_pre():
-    """
-    题目类型和数量选择
-    :return:
-    """
-    if request.method == "GET":
-        subject = request.cookies.get("subject")
-        subject_category = subject_category_dict[subject]
-        return render_template('question_modified_pages/question_add_pre.html', subject=subject,
-                               subject_category=subject_category, question_types=QuestionTypes)
-    else:
-        category = request.form.get('category')
-        question_type = request.form.get('question_type')
-        question_num = int(request.form.get('question_num'))
-        question_form = QuestionForm()
-        return render_template('question_modified_pages/question_add.html', category=category,
-                               question_type=question_type, question_num=question_num, form=question_form)
-
-
 @app.route('/add_question/', methods=['GET', 'POST'])
 def add_question():
     """
@@ -130,50 +110,45 @@ def add_question():
         subject_category = subject_category_dict[subject]
         question_form = QuestionForm()
         question_form.set_question_category(list(zip(subject_category, subject_category)))
+        question_form.set_question_type(list(zip(question_types, question_types)))
         return render_template('question_modified_pages/question_add.html', form=question_form)
     else:
-        category = request.form.get('category')
-        question = request.files['file']
-        base_path = os.path.abspath(os.path.dirname(__file__))
-        path = os.path.join(base_path, 'static', app.config['UPLOAD_FOLDER'], category)
-        if not os.path.exists(path):
-            os.mkdir(path)
-        file_name = secure_filename(time.strftime("%Y-%m-%d-%H:%M:%S", time.localtime()))
-        question.save(os.path.join(path, file_name))
+        question_category = request.form.get('question_category')
+        question_type = request.form.get('question_type')
+        question_body = request.form.get('question_body')
         subject = request.cookies.get('subject')
-        question = "{}.{}".format(category, file_name)
-        # question_num = int(request.form.get('question_num'))
+
         answer = {}
         grade = {}
-        for i in range(int(question_num)):
-            answer['第{}题'.format(i + 1)] = request.form.get('question_answer_%d'.format(i + 1))
-            grade['第{}题'.format(i + 1)] = request.form.get('question_grade_%d'.format(i + 1))
-        question = Question(
-            belong_subject=subject, category=category, question_type=question_type,
-            question=question, answer=answer, grade=grade
-        )
-        db.session.add(question)
-        db.session.commit()
+        # for i in range(int(question_num)):
+        #     answer['第{}题'.format(i + 1)] = request.form.get('question_answer_%d'.format(i + 1))
+        #     grade['第{}题'.format(i + 1)] = request.form.get('question_grade_%d'.format(i + 1))
+        # question = Question(
+        #     belong_subject=subject, category=category, question_type=question_type,
+        #     question=question, answer=answer, grade=grade
+        # )
+        # db.session.add(question)
+        # db.session.commit()
         flash('question created~')
         return render_template('teacher_index.html')
 
 
-@app.route('/static/upload/<filename>')   # this place is used for the url in the ckeditor textbox
-def uploaded_files(filename):
-    path = os.path.join(current_app.name, 'static', current_app.config['CKEDITOR_FILE_UPLOADER'])
-    return send_from_directory(path, filename)
+@app.route('/imageuploader', methods=['POST'])
+def imageuploader():
+    file = request.files.get('file')
+    if file:
+        filename = file.filename.lower()
+        extension = filename.split('.')[-1]
+        if extension in ['jpg', 'gif', 'png', 'jpeg']:
+            fullpath = os.path.join(current_app.name, 'static', app.config['UPLOADED_PATH'])
+            filename = "{}.{}".format(gen_rnd_filename(), extension)
+            img_file = os.path.join(fullpath, filename)
+            if not os.path.exists(fullpath):
+                os.makedirs(fullpath)
+            file.save(img_file)
+            return jsonify({'location' : filename})
 
-
-@app.route('/upload', methods=['POST'])
-def upload():
-    f = request.files.get('upload')  # 获取上传图片文件对象
-    # Add more validations here
-    extension = f.filename.split('.')[1].lower()
-    if extension not in ['jpg', 'gif', 'png', 'jpeg']:  # 验证文件类型示例
-        return upload_fail(message='Image only!')  # 返回upload_fail调用
-    upload_path = os.path.join(current_app.name, 'static', current_app.config['CKEDITOR_FILE_UPLOADER'])
-    if not os.path.exists(upload_path):
-        os.makedirs(upload_path)
-    f.save(os.path.join(upload_path, f.filename))
-    url = url_for('uploaded_files', filename=f.filename)
-    return upload_success(url=url)    # 返回upload_success调用
+    # fail, image did not upload
+    output = make_response(404)
+    output.headers['Error'] = 'Image failed to upload'
+    return output

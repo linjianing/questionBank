@@ -20,9 +20,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', default='dev')   # used for flask-wtf to avoid csrf attack
 
 # 文件上传路径
-app.config['CKEDITOR_SERVE_LOCAL'] = True
-app.config['CKEDITOR_FILE_UPLOADER'] = 'upload'
-app.config['CKEDITOR_FILE_BROWSER'] = 'upload'
+app.config['UPLOADED_PATH'] = 'uploads'
 
 
 ckeditor = CKEditor(app)

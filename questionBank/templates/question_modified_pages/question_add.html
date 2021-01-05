@@ -1,18 +1,62 @@
 {% extends 'base.html' %}
 
-{% block style %}
+{% block head %}
+   {{ super() }}
+	<script type="text/javascript" src="{{ url_for('static', filename='javascript/jquery-3.5.1.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='tinymce/tinymce.min.js') }}"></script>
 {% endblock %}
 
 {% block content %}
 <h3>add question</h3>
 <div>
-    <form method="post">
+    <form action="{{ url_for('add_question') }}" method="post">
         {{ form.question_category.label }}{{ form.question_category }}<br>
-        {{ form.question_body.label }}{{ form.question_body }}
-        <input type="submit" value="提交题目">
+        {{ form.question_type.label }}{{ form.question_type }}<br>
+        {{ form.question_body.label }}{{ form.question_body }}<br>
+        {{ form.submit }}
     </form>
-    {{ ckeditor.load() }}
-    {{ ckeditor.config(name='question_body') }}
+    <button id="add_answer">添加答案</button>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#add_answer").click(function(){
+                if ($("#question_type").val() == "填空题"){
+                    $("#submit").before($("<input type='text' name='blank_answer1'></input>"));
+                }else{
+                    $("#submit").before($("<input type='radio' name='choice_answer1' value='A'>"));
+                    $("#submit").before($("<input type='radio' name='choice_answer1' value='B'>"));
+                    $("#submit").before($("<input type='radio' name='choice_answer1' value='C'>"));
+                    $("#submit").before($("<input type='radio' name='choice_answer1' value='D'>"));
+                }
+
+            });
+        });
+    </script>
+	<script type="text/javascript">
+		tinymce.init({
+			selector: '#question_body',
+			plugins: [
+				'advlist autolink link image imagetools lists charmap print preview hr anchor pagebreak spellchecker',
+				'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+				'save table contextmenu directionality template paste textcolor codesample'
+			],
+			imagetools_toolbar: "rotateleft rotateright | flipv fliph | editimage imageoptions",
+			toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons | codesample',
+			images_upload_url: "{{ url_for('imageuploader') }}",
+			automatic_uploads: true,
+			images_reuse_filename: false,
+			images_upload_base_path: '/static/uploads',
+			codesample_languages: [
+				{ text: 'HTML/XML', value: 'markup' },
+				{ text: 'JavaScript', value: 'javascript' },
+				{ text: 'CSS', value: 'css' },
+				{ text: 'Processing', value: 'processing' },
+				{ text: 'Python', value: 'python' }
+			],
+			width: "100%",
+			height: 300,
+		});
+	</script>
 </div>
 
 {% endblock %}

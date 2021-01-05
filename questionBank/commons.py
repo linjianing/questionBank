@@ -1,5 +1,7 @@
 """this file used for some common variables"""
+from datetime import datetime
 from enum import Enum
+from random import randrange
 
 grades = ("高{}".format(grade+1) for grade in range(3))
 classnums = ("{}班".format(classnum+1) for classnum in range(16))
@@ -13,9 +15,15 @@ information_technology_question_category = ["01信息与信息技术专题", "02
 subject_category_dict = {"信息技术": information_technology_question_category}   # used for store the subject categories
 # question_types = ["choose", "blanks"]
 
+question_types = ["选择题", "填空题"]
 
 class QuestionTypes(Enum):
     """corresponding to attribute (question_type) of question model"""
 
     选择题 = "choose"
     填空题 = "blanks"
+
+
+def gen_rnd_filename():
+    filename_prefix = datetime.now().strftime('%Y%m%d%H%M%S')
+    return '%s%s' % (filename_prefix, str(randrange(1000, 10000)))

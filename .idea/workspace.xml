@@ -6,11 +6,373 @@
       <change beforePath="$PROJECT_DIR$/.idea/questionBankSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/questionBankSystem.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/questionBank/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/commons.py" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/commons.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/questionBank/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/static/ckeditor/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/static/javascript/wangEditor.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/CHANGES.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/adapters/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/build-config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/ckeditor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/contents.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/bn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/bs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/cy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/de-ch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/en-au.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/en-ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/en-gb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/eo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/es-mx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/fo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/fr-ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/gu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/hi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/ka.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/km.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/ku.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/mk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/mn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/ms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/no.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/oc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/pt-br.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/si.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/sq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/sr-latn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/sr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/tt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/ug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/zh-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/lang/zh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/en-au.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/es-mx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/oc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/about/dialogs/about.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/about/dialogs/logo_ckeditor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/balloonpanel/skins/kama/balloonpanel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/balloonpanel/skins/moono-lisa/balloonpanel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/balloonpanel/skins/moono-lisa/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/balloonpanel/skins/moono-lisa/images/hidpi/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/balloonpanel/skins/moono/balloonpanel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/balloonpanel/skins/moono/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/balloonpanel/skins/moono/images/hidpi/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/balloontoolbar/skins/default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/balloontoolbar/skins/kama/balloontoolbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/balloontoolbar/skins/moono-lisa/balloontoolbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/balloontoolbar/skins/moono/balloontoolbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/clipboard/dialogs/paste.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/dialog/dialogDefinition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/dialog/styles/dialog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/easyimage/dialogs/easyimagealt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/easyimage/styles/easyimage.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/icons_hidpi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/image/dialogs/image.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/image/images/noimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/imagebase/styles/imagebase.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/link/dialogs/anchor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/link/dialogs/link.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/link/images/anchor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/link/images/hidpi/anchor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/magicline/images/hidpi/icon-rtl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/magicline/images/hidpi/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/magicline/images/icon-rtl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/magicline/images/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/pastefromgdocs/filter/default.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/pastefromword/filter/default.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/pastetools/filter/common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/pastetools/filter/image.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/scayt/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/scayt/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/scayt/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/scayt/dialogs/dialog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/scayt/dialogs/options.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/scayt/dialogs/toolbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/cy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/en-au.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/en-ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/eo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/es-mx.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/km.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/ku.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/no.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/oc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/si.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/sq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/sr-latn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/sr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/tt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/ug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/lang/zh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/specialchar/dialogs/specialchar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/table/dialogs/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/tableselection/styles/tableselection.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/tabletools/dialogs/tableCell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/widget/images/handle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/wsc/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/wsc/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/wsc/dialogs/ciframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/wsc/dialogs/wsc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/wsc/dialogs/wsc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/wsc/dialogs/wsc_ie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/css/samples.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/img/github-top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/img/header-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/img/header-separator.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/img/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/img/navigation-tip.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/js/sample.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/js/sf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/ajax.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/api.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/appendto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/assets/inlineall/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/assets/posteddata.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/assets/sample.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/assets/uilanguages/languages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/datafiltering.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/dialog/assets/my_dialog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/dialog/dialog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/divreplace.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/easyimage/easyimage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/enterkey/enterkey.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.fla" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/htmlwriter/assets/outputforflash/swfobject.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/htmlwriter/outputforflash.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/htmlwriter/outputhtml.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/inlineall.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/inlinebycode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/inlinetextarea.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/jquery.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/magicline/magicline.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/readonly.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/replacebyclass.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/replacebycode.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/sample.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/sample.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/sample_posteddata.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/tabindex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/toolbar/toolbar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/uicolor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/uilanguages.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/wysiwygarea/fullpage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/old/xhtmlstyle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/css/fontello.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/font/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/font/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/font/fontello.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/font/fontello.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/font/fontello.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/font/fontello.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/lib/codemirror/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/dialog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/dialog_ie.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/dialog_ie8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/dialog_iequirks.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/editor.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/editor_gecko.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/editor_ie.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/editor_ie8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/editor_iequirks.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/icons_hidpi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/images/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/images/hidpi/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/images/hidpi/lock-open.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/images/hidpi/lock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/images/hidpi/refresh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/images/lock-open.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/images/lock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/images/refresh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/images/spinner.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/skins/moono-lisa/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/ckeditor/vendor/promise.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/upload/01信息与信息技术专题/2020-12-12-205341" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/upload/01信息与信息技术专题/2020-12-12-205433" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/upload/01信息与信息技术专题/2020-12-12-211034" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/upload/01信息与信息技术专题/2020-12-12-211129" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/upload/01信息与信息技术专题/2020-12-12-211704" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/upload/01信息与信息技术专题/2020-12-12-214715" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/upload/01信息与信息技术专题/2020-12-12-214955" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/upload/st202008DD223413507nHuTSkuZBj.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/upload/st202008DD223413526tPhqhvzFZn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/upload/testPng.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/upload/testquestion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/questionBank/templates/question_modified_pages/question_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/question_modified_pages/question_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/templates/teacher_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/teacher_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/templates/question_modified_pages/question_add_pre.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/question_modified_pages/question_add_pre.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/questionBank/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +402,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testTinyMCE" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -111,10 +473,10 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
-    <state x="652" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609467244960">
+    <state x="652" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609839031244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="652" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609467244960" />
+    <state x="652" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609839031244" />
     <state x="348" y="336" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606478415654">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -123,62 +485,66 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="890" y="250" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609396094141" />
-    <state x="1025" y="300" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1609397475333">
+    <state x="1079" y="321" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1609757185174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1025" y="300" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609397475333" />
-    <state x="430" y="360" key="#xdebugger.evaluate" timestamp="1609399026198">
+    <state x="1079" y="321" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609757185174" />
+    <state x="1213" y="530" width="530" height="510" key="#xdebugger.evaluate" timestamp="1609842701952">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="430" y="360" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1609399026198" />
+    <state x="1213" y="530" width="530" height="510" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1609842701952" />
     <state x="877" y="307" key="EnvironmentVariablesDialog" timestamp="1609392974802">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="877" y="307" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609392974802" />
-    <state x="1016" y="372" key="FileChooserDialogImpl" timestamp="1609485619215">
+    <state x="1016" y="372" key="FileChooserDialogImpl" timestamp="1609839671424">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1016" y="372" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609485619215" />
-    <state width="1288" height="278" key="GridCell.Tab.0.bottom" timestamp="1609557100275">
+    <state x="1016" y="372" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609839671424" />
+    <state width="1726" height="277" key="GridCell.Tab.0.bottom" timestamp="1609850445901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1288" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609557100275" />
-    <state width="1288" height="278" key="GridCell.Tab.0.center" timestamp="1609557100275">
+    <state width="1726" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609850445901" />
+    <state width="1726" height="277" key="GridCell.Tab.0.center" timestamp="1609850445900">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1288" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609557100275" />
-    <state width="1288" height="278" key="GridCell.Tab.0.left" timestamp="1609557100275">
+    <state width="1726" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609850445900" />
+    <state width="1726" height="277" key="GridCell.Tab.0.left" timestamp="1609850445899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1288" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609557100275" />
-    <state width="1288" height="278" key="GridCell.Tab.0.right" timestamp="1609557100275">
+    <state width="1726" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609850445899" />
+    <state width="1726" height="277" key="GridCell.Tab.0.right" timestamp="1609850445900">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1288" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609557100275" />
-    <state width="1288" height="278" key="GridCell.Tab.1.bottom" timestamp="1609557100276">
+    <state width="1726" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609850445900" />
+    <state width="1726" height="277" key="GridCell.Tab.1.bottom" timestamp="1609850445901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1288" height="278" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609557100276" />
-    <state width="1288" height="278" key="GridCell.Tab.1.center" timestamp="1609557100276">
+    <state width="1726" height="277" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609850445901" />
+    <state width="1726" height="277" key="GridCell.Tab.1.center" timestamp="1609850445901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1288" height="278" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609557100276" />
-    <state width="1288" height="278" key="GridCell.Tab.1.left" timestamp="1609557100276">
+    <state width="1726" height="277" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609850445901" />
+    <state width="1726" height="277" key="GridCell.Tab.1.left" timestamp="1609850445901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1288" height="278" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609557100276" />
-    <state width="1288" height="278" key="GridCell.Tab.1.right" timestamp="1609557100276">
+    <state width="1726" height="277" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609850445901" />
+    <state width="1726" height="277" key="GridCell.Tab.1.right" timestamp="1609850445901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1288" height="278" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609557100276" />
-    <state x="711" y="219" key="SettingsEditor" timestamp="1609466882443">
+    <state width="1726" height="277" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609850445901" />
+    <state x="711" y="219" key="SettingsEditor" timestamp="1609573257218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="711" y="219" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1609466882443" />
-    <state x="632" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1609151796538">
+    <state x="711" y="219" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1609573257218" />
+    <state width="790" height="519" key="XDebugger.FullValuePopup" timestamp="1609809014141">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="632" y="366" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609151796538" />
+    <state width="790" height="519" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1609809014141" />
+    <state x="632" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1609805528539">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="632" y="366" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609805528539" />
     <state x="1141" y="344" width="647" height="534" key="find.popup" timestamp="1609472457080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -189,6 +555,15 @@
     <state x="1120" y="237" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607775688199" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/questionBank/views.py</url>
+          <line>137</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="subject_category" />
