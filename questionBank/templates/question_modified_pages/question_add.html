@@ -9,7 +9,7 @@
 {% block content %}
 <h3>add question</h3>
 <div>
-    <form action="{{ url_for('add_question') }}" method="post">
+    <form id="form" action="{{ url_for('add_question', question_num=0) }}" method="post">
         {{ form.question_category.label }}{{ form.question_category }}<br>
         {{ form.question_type.label }}{{ form.question_type }}<br>
         {{ form.question_body.label }}{{ form.question_body }}<br>
@@ -18,18 +18,31 @@
     <button id="add_answer">添加答案</button>
 
     <script type="text/javascript">
+        var question_num = 0;
         $(document).ready(function(){
             $("#add_answer").click(function(){
+                question_num += 1;
                 if ($("#question_type").val() == "填空题"){
-                    $("#submit").before($("<input type='text' name='blank_answer1'></input>"));
+                    var answer_name = 'answer'+question_num
+                    $("#submit").before($("<input type='text' name=" + answer_name + "></input><br>"));
                 }else{
-                    $("#submit").before($("<input type='radio' name='choice_answer1' value='A'>"));
-                    $("#submit").before($("<input type='radio' name='choice_answer1' value='B'>"));
-                    $("#submit").before($("<input type='radio' name='choice_answer1' value='C'>"));
-                    $("#submit").before($("<input type='radio' name='choice_answer1' value='D'>"));
+                    var answer_name = 'answer'+question_num;
+                    $("#submit").before($("<label>A</label>"));
+                    $("#submit").before($("<input type='radio' name=" + answer_name + " value='A'>"));
+                    $("#submit").before($("<label>B</label>"));
+                    $("#submit").before($("<input type='radio' name=" + answer_name + " value='B'>"));
+                    $("#submit").before($("<label>C</label>"));
+                    $("#submit").before($("<input type='radio' name=" + answer_name + " value='C'>"));
+                    $("#submit").before($("<label>D</label>"));
+                    $("#submit").before($("<input type='radio' name=" + answer_name + " value='D'><br>"));
                 }
-
             });
+
+            $("#submit").click(function(){
+                var new_url = "/add_question/" + question_num
+                $("#form").attr('action', new_url);
+                $("#form").submit();
+            })
         });
     </script>
 	<script type="text/javascript">

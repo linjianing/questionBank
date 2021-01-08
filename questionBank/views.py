@@ -47,7 +47,7 @@ def student_login():
     :return:
     """
     if request.method == 'GET':
-        return render_template('student_login.html')
+        return render_template('student_pages/student_login.html')
     else:
         student_num = request.form.get('student_num')
         password = request.form.get('password')
@@ -65,7 +65,7 @@ def student_index():
     待实现的业务逻辑： 学生端主页面
     :return:
     """
-    return render_template('student_index.html')
+    return render_template('student_pages/student_index.html')
 
 
 @app.route('/teacher_login', methods=['GET', 'POST'])
@@ -75,20 +75,20 @@ def teacher_login():
     :return:
     """
     if request.method == 'GET':
-        return render_template('teacher_login.html')
+        return render_template('teacher_pages/teacher_login.html')
     else:
         teacher_name = request.form.get('teacher_name')
         password = request.form.get('password')
         login_teacher = Teacher.query.filter_by(teacher_name=teacher_name).first()
         if login_teacher is not None and login_teacher.validate_password(password):
-            resp = make_response(render_template('teacher_index.html'))
+            resp = make_response(render_template('teacher_pages/teacher_index.html'))
             subject = login_teacher.subject
             resp.set_cookie('teacher', teacher_name)
             resp.set_cookie('subject', subject)
             return resp
         else:
             flash("{}'s {} password error or not registered ~".format(teacher_name, password))
-            return render_template('teacher_login.html')
+            return render_template('teacher_pages/teacher_login.html')
 
 
 # @app.route('/teacher_register', methods=['GET', 'POST'])
@@ -99,8 +99,8 @@ def teacher_login():
 #     else:
 
 
-@app.route('/add_question/', methods=['GET', 'POST'])
-def add_question():
+@app.route('/add_question/<question_num>', methods=['GET', 'POST'])
+def add_question(question_num):
     """
     新增题目
     :return:
@@ -117,20 +117,22 @@ def add_question():
         question_type = request.form.get('question_type')
         question_body = request.form.get('question_body')
         subject = request.cookies.get('subject')
+        if int(question_num) > 1:
+            question_type = question_types[0]
+        else:
+            question_type = question_type[1]
+        for i in range(int(question_num)):
+            answer = {"第{}小题".format(i+1): request.form.get('answer{}'.format(i+1))}
+            grade = {"第{}小题".format(i+1): 2}
 
-        answer = {}
-        grade = {}
-        # for i in range(int(question_num)):
-        #     answer['第{}题'.format(i + 1)] = request.form.get('question_answer_%d'.format(i + 1))
-        #     grade['第{}题'.format(i + 1)] = request.form.get('question_grade_%d'.format(i + 1))
-        # question = Question(
-        #     belong_subject=subject, category=category, question_type=question_type,
-        #     question=question, answer=answer, grade=grade
-        # )
-        # db.session.add(question)
-        # db.session.commit()
+        question = Question(
+            belong_subject=subject, category=question_category, question_type=question_type,
+            question=question_body, answer=answer, grade=grade
+        )
+        db.session.add(question)
+        db.session.commit()
         flash('question created~')
-        return render_template('teacher_index.html')
+        return render_template('teacher_pages/teacher_index.html')
 
 
 @app.route('/imageuploader', methods=['POST'])

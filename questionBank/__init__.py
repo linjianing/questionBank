@@ -5,6 +5,7 @@ import sys
 
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_bootstrap import Bootstrap
 
 WIN = sys.platform.startswith('win')
 if WIN:
@@ -26,6 +27,7 @@ app.config['UPLOADED_PATH'] = 'uploads'
 ckeditor = CKEditor(app)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+bootstrap = Bootstrap(app)
 
 
 from questionBank import views, commands
