@@ -2,17 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46ec96b8-3958-413a-9284-49d92180cef1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/questionBank/templates/teacher_pages/teacher_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/questionBank/templates/baseRegisterAndLogin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/questionBankSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/questionBankSystem.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/wangeditor/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/wangeditor/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/questionBank/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/commons.py" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/commons.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/questionBank/data.db" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/data.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/javascript/jquery-3.5.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/static/jquery/jquery-3.5.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/static/javascript/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/static/jquery/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/templates/base.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/questionBank/templates/question_modified_pages/question_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/question_modified_pages/question_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/templates/student_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/student_pages/student_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/templates/student_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/student_pages/student_login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/templates/student_register.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/student_pages/student_register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/templates/teacher_index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/templates/teacher_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/teacher_pages/teacher_login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/templates/teacher_register.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/teacher_pages/teacher_register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/templates/student_pages/student_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/student_pages/student_login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/templates/student_pages/student_register.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/student_pages/student_register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/templates/teacher_pages/teacher_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/teacher_pages/teacher_login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/questionBank/templates/teacher_pages/teacher_register.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/teacher_pages/teacher_register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/questionBank/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -42,20 +48,21 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testTinyMCE" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/questionBank/templates/teacher_pages" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\ljn\project\pythonProject\flaskWebApplication\questionBankSystem\questionBank\static\javascript" />
-      <recent name="D:\ljn\project\pythonProject\flaskWebApplication\questionBankSystem\questionBank\templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\project\pythonProject\flask_project\questionBank\questionBank\templates" />
+      <recent name="D:\project\pythonProject\flask_project\questionBank\questionBank\static\css" />
       <recent name="D:\ljn\project\pythonProject\flaskWebApplication\questionBankSystem\questionBank\templates\teacher_pages" />
       <recent name="D:\ljn\project\pythonProject\flaskWebApplication\questionBankSystem\questionBank\templates\student_pages" />
       <recent name="D:\project\pythonProject\flask_project\questionBank\questionBank\static" />
-      <recent name="D:\project\pythonProject\flask_project\questionBank\questionBank" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\pythonProject\flask_project\questionBank\questionBank\templates\teacher_pages" />
       <recent name="D:\ljn\project\pythonProject\flaskWebApplication\questionBankSystem\questionBank\static\javascript" />
+      <recent name="D:\ljn\project\pythonProject\flaskWebApplication\questionBankSystem\questionBank\templates" />
     </key>
   </component>
   <component name="RunManager">
@@ -131,10 +138,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1079" y="321" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1609757185174" />
-    <state x="909" y="464" width="530" height="510" key="#xdebugger.evaluate" timestamp="1610088744841">
+    <state x="909" y="464" width="530" height="510" key="#xdebugger.evaluate" timestamp="1610170528180">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="909" y="464" width="530" height="510" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1610088744841" />
+    <state x="909" y="464" width="530" height="510" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1610170528180" />
     <state x="877" y="307" key="EnvironmentVariablesDialog" timestamp="1609392974802">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -143,50 +150,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1016" y="372" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609839671424" />
-    <state width="1268" height="301" key="GridCell.Tab.0.bottom" timestamp="1610094075700">
+    <state width="1850" height="229" key="GridCell.Tab.0.bottom" timestamp="1610170606887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="301" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610094075700" />
-    <state width="1268" height="301" key="GridCell.Tab.0.center" timestamp="1610094075699">
+    <state width="1850" height="229" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610170606887" />
+    <state width="1850" height="229" key="GridCell.Tab.0.center" timestamp="1610170606887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="301" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610094075699" />
-    <state width="1268" height="301" key="GridCell.Tab.0.left" timestamp="1610094075699">
+    <state width="1850" height="229" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610170606887" />
+    <state width="1850" height="229" key="GridCell.Tab.0.left" timestamp="1610170606887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="301" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610094075699" />
-    <state width="1268" height="301" key="GridCell.Tab.0.right" timestamp="1610094075700">
+    <state width="1850" height="229" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610170606887" />
+    <state width="1850" height="229" key="GridCell.Tab.0.right" timestamp="1610170606887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="301" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610094075700" />
-    <state width="1268" height="301" key="GridCell.Tab.1.bottom" timestamp="1610094084479">
+    <state width="1850" height="229" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610170606887" />
+    <state width="1850" height="229" key="GridCell.Tab.1.bottom" timestamp="1610170606887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="301" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610094084479" />
-    <state width="1268" height="301" key="GridCell.Tab.1.center" timestamp="1610094084479">
+    <state width="1850" height="229" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610170606887" />
+    <state width="1850" height="229" key="GridCell.Tab.1.center" timestamp="1610170606887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="301" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610094084479" />
-    <state width="1268" height="301" key="GridCell.Tab.1.left" timestamp="1610094084479">
+    <state width="1850" height="229" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610170606887" />
+    <state width="1850" height="229" key="GridCell.Tab.1.left" timestamp="1610170606887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="301" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610094084479" />
-    <state width="1268" height="301" key="GridCell.Tab.1.right" timestamp="1610094084479">
+    <state width="1850" height="229" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610170606887" />
+    <state width="1850" height="229" key="GridCell.Tab.1.right" timestamp="1610170606887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="301" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610094084479" />
-    <state x="711" y="219" key="SettingsEditor" timestamp="1609573257218">
+    <state width="1850" height="229" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610170606887" />
+    <state x="711" y="219" key="SettingsEditor" timestamp="1610116753023">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="711" y="219" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1609573257218" />
+    <state x="711" y="219" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1610116753023" />
     <state width="790" height="519" key="XDebugger.FullValuePopup" timestamp="1610087886406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="790" height="519" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1610087886406" />
-    <state x="632" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1610087518920">
+    <state x="632" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1610154304112">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="632" y="366" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610087518920" />
+    <state x="632" y="366" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610154304112" />
     <state x="1141" y="344" width="647" height="534" key="find.popup" timestamp="1610093703942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -197,6 +204,15 @@
     <state x="1120" y="237" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1609852318177" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/questionBank/views.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="subject_category" />

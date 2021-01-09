@@ -27,7 +27,6 @@ app.config['UPLOADED_PATH'] = 'uploads'
 ckeditor = CKEditor(app)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-bootstrap = Bootstrap(app)
 
 
 from questionBank import views, commands

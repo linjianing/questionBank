@@ -1,28 +1,31 @@
-{% extends 'base.html' %}
+{% extends 'baseRegisterAndLogin.html' %}
 
 {% block content %}
-<h3>register</h3>
-<form method="post">
-    学号<br>
-    <input type="text" name="student_num" required><br><br>
-    姓名<br>
-    <input type="text" name="name" required><br><br>
-    年级<br>
-    <input type="text" name="grade" list="gradeslist" placeholder="请选择年级"><br><br>
-    <datalist id="gradeslist">
-        {% for grade in grades %}
-            <option>{{ grade }}</option>
-        {% endfor %}
-    </datalist>
-    班级<br>
-    <input type="text" mame="class_num" list="classnumslist" placeholder="请选择班级"><br><br>
-    <datalist id="classnumslist">
-        {% for classnum in classnums %}
-            <option>{{ classnum }}</option>
-        {% endfor %}
-    </datalist>
-    密码<br>
-    <input type="password" name="password" required><br><br>
-    <input class="btn" type="submit" name="submit" value="注册">
-</form>
+	<main class="form-signin">
+        <form method="post">
+            <h1 class="h3 mb-3 fw-normal">注冊</h1>
+            <label for="student_num" class="visually-hidden">学号</label>
+            <input type="text" id="student_num" name="student_num" class="form-control" placeholder="學號" required autofocus>
+            <label for="name" class="visually-hidden">姓名</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="姓名" required>
+            <label for="grade" class="visually-hidden">年級</label>
+            <input type="text" id="grade" name="grade" list="gradeslist" class="form-control" placeholder="年級" required>
+            <datalist id="gradeslist">
+                {% for grade in grades %}
+                    <option>{{ grade }}</option>
+                {% endfor %}
+            </datalist>
+            <label for="class_num" class="visually-hidden">班級</label>
+            <input type="text" id="class_num" name="class_num" list="classnumslist" class="form-control" placeholder="班級" required>
+            <datalist id="classnumslist">
+                {% for classnum in classnums %}
+                    <option>{{ classnum }}</option>
+                {% endfor %}
+            </datalist>
+            <label for="password" class="visually-hidden">密码</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="密碼" required>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">注冊</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2020<a href="http://60.191.178.98:88/">温岭二中校网</a></p>
+        </form>
+    </main>
 {% endblock %}
