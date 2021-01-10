@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46ec96b8-3958-413a-9284-49d92180cef1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/questionBank/templates/teacher_pages/teacher_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/data.db" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/data.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/templates/question_modified_pages/question_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/question_modified_pages/question_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/templates/student_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/student_pages/student_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/templates/student_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/student_pages/student_login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/templates/student_register.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/student_pages/student_register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/templates/teacher_index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/templates/teacher_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/teacher_pages/teacher_login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/templates/teacher_register.html" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/templates/teacher_pages/teacher_register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/questionBank/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/questionBank/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="46ec96b8-3958-413a-9284-49d92180cef1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -143,38 +130,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1016" y="372" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609839671424" />
-    <state width="1268" height="301" key="GridCell.Tab.0.bottom" timestamp="1610094075700">
+    <state width="1268" height="302" key="GridCell.Tab.0.bottom" timestamp="1610257432004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="301" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610094075700" />
-    <state width="1268" height="301" key="GridCell.Tab.0.center" timestamp="1610094075699">
+    <state width="1268" height="302" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610257432004" />
+    <state width="1268" height="302" key="GridCell.Tab.0.center" timestamp="1610257432004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="301" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610094075699" />
-    <state width="1268" height="301" key="GridCell.Tab.0.left" timestamp="1610094075699">
+    <state width="1268" height="302" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610257432004" />
+    <state width="1268" height="302" key="GridCell.Tab.0.left" timestamp="1610257432004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="301" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610094075699" />
-    <state width="1268" height="301" key="GridCell.Tab.0.right" timestamp="1610094075700">
+    <state width="1268" height="302" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610257432004" />
+    <state width="1268" height="302" key="GridCell.Tab.0.right" timestamp="1610257432004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="301" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610094075700" />
-    <state width="1268" height="301" key="GridCell.Tab.1.bottom" timestamp="1610094084479">
+    <state width="1268" height="302" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610257432004" />
+    <state width="1268" height="301" key="GridCell.Tab.1.bottom" timestamp="1610094541378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="301" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610094084479" />
-    <state width="1268" height="301" key="GridCell.Tab.1.center" timestamp="1610094084479">
+    <state width="1268" height="301" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610094541378" />
+    <state width="1268" height="301" key="GridCell.Tab.1.center" timestamp="1610094541378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="301" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610094084479" />
-    <state width="1268" height="301" key="GridCell.Tab.1.left" timestamp="1610094084479">
+    <state width="1268" height="301" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610094541378" />
+    <state width="1268" height="301" key="GridCell.Tab.1.left" timestamp="1610094541378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="301" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610094084479" />
-    <state width="1268" height="301" key="GridCell.Tab.1.right" timestamp="1610094084479">
+    <state width="1268" height="301" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610094541378" />
+    <state width="1268" height="301" key="GridCell.Tab.1.right" timestamp="1610094541378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="301" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610094084479" />
+    <state width="1268" height="301" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610094541378" />
     <state x="711" y="219" key="SettingsEditor" timestamp="1609573257218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -183,10 +170,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="790" height="519" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1610087886406" />
-    <state x="632" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1610087518920">
+    <state x="632" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1610257400264">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="632" y="366" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610087518920" />
+    <state x="632" y="366" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610257400264" />
     <state x="1141" y="344" width="647" height="534" key="find.popup" timestamp="1610093703942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
