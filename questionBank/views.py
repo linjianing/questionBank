@@ -8,7 +8,7 @@ from werkzeug.security import generate_password_hash
 
 from questionBank import app, db
 from questionBank.models import User, Teacher, Question
-from questionBank.commons import grades, classnums, subject_lists, subject_category_dict, QuestionTypes, \
+from questionBank.commons import grades_list, classnums_list, subject_lists, subject_category_dict, QuestionTypes, \
     gen_rnd_filename, question_types
 from questionBank.forms import QuestionForm
 
@@ -21,7 +21,9 @@ def student_register():
     """
 
     if request.method == 'GET':
-        return render_template('student_register.html', grades=grades, classnums=classnums)
+        grades = grades_list
+        classnums = classnums_list
+        return render_template('student_pages/student_register.html', grades=grades, classnums=classnums)
     else:
         student_num = request.form.get('student_num')
         name = request.form.get('name')

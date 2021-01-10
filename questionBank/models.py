@@ -2,10 +2,7 @@ from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from questionBank import db
-from questionBank.commons import grades, classnums
 
-# grades = ("高{}".format(grade+1) for grade in range(3))
-# classnums = ("{}班".format(classnum+1) for classnum in range(16))
 
 
 # 模型类

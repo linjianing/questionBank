@@ -3,8 +3,8 @@ from datetime import datetime
 from enum import Enum
 from random import randrange
 
-grades = ("高{}".format(grade+1) for grade in range(3))
-classnums = ("{}班".format(classnum+1) for classnum in range(16))
+grades_list = ("高{}".format(grade+1) for grade in range(3))
+classnums_list = ("{}班".format(classnum+1) for classnum in range(16))
 subject_lists = ("语文", "数学", "外语", "物理", "化学", "生物", "政治", "历史", "地理", "信息技术", "通用技术")
 information_technology_question_category = ["01信息与信息技术专题", "02网页邮件专题", "03多媒体概念专题", "04二进制编码专题",
                                             "05容量计算专题", "06人工智能专题", "07Access专题", "08Photoshop专题",
