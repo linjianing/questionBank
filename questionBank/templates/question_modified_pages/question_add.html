@@ -1,4 +1,8 @@
-{% extends 'base.html' %}
+{% extends 'teacher_base.html' %}
+
+{% block subtitle %}
+    新增题目
+{% endblock %}
 
 {% block head %}
    {{ super() }}
@@ -6,7 +10,6 @@
 {% endblock %}
 
 {% block content %}
-<h3>add question</h3>
 <div>
     <form id="form" action="{{ url_for('add_question', question_num=0) }}" method="post">
         {{ form.question_category.label }}{{ form.question_category }}<br>
@@ -43,9 +46,10 @@
                 $("#form").submit();
             })
         });
-    </script>
-	<script type="text/javascript">
-		tinymce.init({
+
+
+
+        tinymce.init({
 			selector: '#question_body',
 			plugins: [
 				'advlist autolink link image imagetools lists charmap print preview hr anchor pagebreak spellchecker',
@@ -54,10 +58,10 @@
 			],
 			imagetools_toolbar: "rotateleft rotateright | flipv fliph | editimage imageoptions",
 			toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons | codesample',
-			images_upload_url: "{{ url_for('imageuploader') }}",
+			// images_upload_url: img_upload_url,
 			automatic_uploads: true,
 			images_reuse_filename: false,
-			images_upload_base_path: '/static/uploads',
+			// images_upload_base_path: upload_path,
 			codesample_languages: [
 				{ text: 'HTML/XML', value: 'markup' },
 				{ text: 'JavaScript', value: 'javascript' },
@@ -65,10 +69,51 @@
 				{ text: 'Processing', value: 'processing' },
 				{ text: 'Python', value: 'python' }
 			],
+
+			images_upload_handler: function(blobInfo, success, failure, progress){
+                var category_name = $("#question_category").val();
+                var img_upload_url = "/imageuploader/" + category_name
+                var xhr, formData;
+                xhr = new XMLHttpRequest();
+                xhr.withCredentials = false;
+                xhr.open('POST', img_upload_url);
+
+                xhr.upload.onprogress = function(e){
+                    progress(e.loaded / e.total * 100);
+                }
+
+                xhr.onload = function() {
+                    var json;
+                    if (xhr.status == 403) {
+                        failure('HTTP Error: ' + xhr.status, { remove: true });
+                        return;
+                    }
+                    if (xhr.status < 200 || xhr.status >= 300 ) {
+                        failure('HTTP Error: ' + xhr.status);
+                        return;
+                    }
+                    json = JSON.parse(xhr.responseText);
+                    if (!json || typeof json.location != 'string') {
+                        failure('Invalid JSON: ' + xhr.responseText);
+                        return;
+                    }
+                    success(json.location);
+                };
+
+                xhr.onerror = function () {
+                    failure('Image upload failed due to a XHR Transport error. Code: ' + xhr.status);
+                }
+
+                formData = new FormData();
+                formData.append('file', blobInfo.blob(), blobInfo.filename());
+
+                xhr.send(formData);
+            },
 			width: "100%",
 			height: 300,
 		});
-	</script>
+    </script>
+
 </div>
 
 {% endblock %}

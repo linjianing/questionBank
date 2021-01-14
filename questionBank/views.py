@@ -93,6 +93,16 @@ def teacher_login():
             return render_template('teacher_pages/teacher_login.html')
 
 
+@app.route('/teacher/logout', methods=['GET', 'POST'])
+def teacher_logout():
+    return redirect(url_for('teacher_login'))
+
+
+@app.route('/student/logout', methods=['GET', 'POST'])
+def student_logout():
+    return redirect(url_for('student_login'))
+
+
 # @app.route('/teacher_register', methods=['GET', 'POST'])
 # def teacher_register():
 #     if request.method == 'GET':
@@ -137,22 +147,49 @@ def add_question(question_num):
         return render_template('teacher_pages/teacher_index.html')
 
 
-@app.route('/imageuploader', methods=['POST'])
-def imageuploader():
+@app.route('/imageuploader/<category>', methods=['POST'])
+def imageuploader(category):
     file = request.files.get('file')
     if file:
         filename = file.filename.lower()
         extension = filename.split('.')[-1]
         if extension in ['jpg', 'gif', 'png', 'jpeg']:
-            fullpath = os.path.join(current_app.name, 'static', app.config['UPLOADED_PATH'])
+            fullpath = os.path.join(current_app.name, 'static', app.config['UPLOADED_PATH'], category)
             filename = "{}.{}".format(gen_rnd_filename(), extension)
             img_file = os.path.join(fullpath, filename)
             if not os.path.exists(fullpath):
                 os.makedirs(fullpath)
             file.save(img_file)
-            return jsonify({'location' : filename})
+            filepath = os.path.join('/static', app.config['UPLOADED_PATH'], category, filename)
+            return jsonify({'location' : filepath})
 
     # fail, image did not upload
     output = make_response(404)
     output.headers['Error'] = 'Image failed to upload'
     return output
+
+
+@app.route('/add_lession', methods=['GET', 'POST'])
+def add_lession():
+    return render_template('lession_pages/add_lession.html')
+
+
+@app.route('/student/practice_modified', methods=['GET', 'POST'])
+def student_practice_modified():
+    if request.method == 'GET':
+        subjects = subject_lists
+        return render_template('practice_pages/practice_config.html', subject_lists=subjects)
+    else:
+        pass
+
+
+@app.route('/student/general_practice')
+def student_general_practice():
+    if request.method == 'GET':
+        return render_template('practice_pages/general_practice.html')
+
+
+@app.route('/student/special_practice')
+def student_special_practice():
+    if request.method == 'GET':
+        return render_template('practice_pages/special_practice.html')

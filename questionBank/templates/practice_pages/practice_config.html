@@ -1,0 +1,19 @@
+{% extends 'student_base.html' %}
+{% block subtitle %}
+    选择练习内容
+{% endblock %}
+{% block content %}
+    <div class="row  row-cols-4 row-cols-md-4 g-4">
+      <div class="col">
+            <a href="{{ url_for('student_general_practice') }}">
+                <img src="{{ url_for('static', filename='icons/17.svg') }}" alt="综合练习，自定义专题和题数" class="img-rounded img-thumbnail">
+            </a>
+      </div>
+      <div class="col">
+            <a href="{{ url_for('student_special_practice') }}">
+                <img src="{{ url_for('static', filename='icons/01.svg') }}" alt="专项练习，自定义专题练习" class="img-rounded img-thumbnail">
+            </a>
+      </div>
+    </div>
+
+{% endblock %}
