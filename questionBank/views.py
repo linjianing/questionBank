@@ -1,5 +1,6 @@
 import os
 import time
+from random import choice, randint
 
 from flask import request, url_for, flash, render_template, make_response, send_from_directory, current_app, jsonify
 from flask_login import current_user, login_required, login_user, logout_user
@@ -9,7 +10,7 @@ from werkzeug.security import generate_password_hash
 from questionBank import app, db
 from questionBank.models import User, Teacher, Question
 from questionBank.commons import grades_list, classnums_list, subject_lists, subject_category_dict, QuestionTypes, \
-    gen_rnd_filename, question_types
+    gen_rnd_filename, question_types, DEFAULT_SUBJECT, DEFAULT_QUESTION_NUM, LOWER_BOUND
 from questionBank.forms import QuestionForm
 
 
@@ -53,9 +54,11 @@ def student_login():
     else:
         student_num = request.form.get('student_num')
         password = request.form.get('password')
-        login_user = User.query.filter_by(student_num=student_num).first()
-        if login_user != None and login_user.validate_password(password):
-            return redirect(url_for('student_index'))
+        user = User.query.filter_by(student_num=student_num).first()
+        if user is not None and user.validate_password(password):
+            resp = make_response(redirect(url_for('student_index')))
+            resp.set_cookie('user', str(user.id))
+            return resp
         else:
             flash("password error or not registered ~")
             return redirect(url_for('student_login'))
@@ -111,8 +114,8 @@ def student_logout():
 #     else:
 
 
-@app.route('/add_question/<question_num>', methods=['GET', 'POST'])
-def add_question(question_num):
+@app.route('/add_question/<question_num>/<question_type>', methods=['GET', 'POST'])
+def add_question(question_num, question_type):
     """
     新增题目
     :return:
@@ -126,17 +129,13 @@ def add_question(question_num):
         return render_template('question_modified_pages/question_add.html', form=question_form)
     else:
         question_category = request.form.get('question_category')
-        question_type = request.form.get('question_type')
         question_body = request.form.get('question_body')
         subject = request.cookies.get('subject')
-        if int(question_num) > 1:
-            question_type = question_types[0]
-        else:
-            question_type = question_type[1]
+        answer = {}
+        grade = {}
         for i in range(int(question_num)):
-            answer = {"第{}小题".format(i+1): request.form.get('answer{}'.format(i+1))}
-            grade = {"第{}小题".format(i+1): 2}
-
+            answer["第{}小题".format(i+1)] = ''.join(request.form.getlist('answer{}'.format(i+1)))
+            grade["第{}小题".format(i+1)] = 2
         question = Question(
             belong_subject=subject, category=question_category, question_type=question_type,
             question=question_body, answer=answer, grade=grade
@@ -177,19 +176,132 @@ def add_lession():
 @app.route('/student/practice_modified', methods=['GET', 'POST'])
 def student_practice_modified():
     if request.method == 'GET':
-        subjects = subject_lists
-        return render_template('practice_pages/practice_config.html', subject_lists=subjects)
+        return render_template('practice_pages/practice_config.html')
     else:
         pass
 
 
-@app.route('/student/general_practice')
+@app.route('/student/special_practice_modified', methods=['GET', 'POST'])
+def student_special_practice_modified():
+    """
+    config for special practice
+    :param category_num:
+    :return:
+    """
+    if request.method == 'GET':
+        subject = DEFAULT_SUBJECT
+        categories = subject_category_dict[subject]
+        return render_template('practice_pages/special_practice_config.html', subject_category=categories)
+    else:
+        question_config = {}
+        category_list = request.form.getlist('category')
+        for i in range(len(category_list)):
+            question_category_name = category_list[i]
+            question_category_num = request.form.get('question_num_{}'.format(int(question_category_name[:2])))
+            question_config[question_category_name] = question_category_num
+        return redirect(url_for('student_special_practice', question_config=question_config))
+
+
+@app.route('/student/general_practice', methods=['GET', 'POST'])
 def student_general_practice():
+    """
+    随机从题库中抽取题目
+    :return:
+    """
+    total_question_num = Question.query.count()
+    question_num = DEFAULT_QUESTION_NUM if DEFAULT_QUESTION_NUM <= total_question_num else total_question_num
     if request.method == 'GET':
-        return render_template('practice_pages/general_practice.html')
+        question_list = []
+        if total_question_num <= LOWER_BOUND:  # 总问题数太少时
+            total_offset_list = [i for i in range(total_question_num)]
+            for i in range(question_num):
+
+                offset_num = choice(total_offset_list)
+                question_list.append(Question.query.offset(offset_num).first())
+                total_offset_list.remove(offset_num)
+        else:  # 总问题数不少时
+            offset_list = []
+            for i in range(question_num):
+                offset_num = randint(0, total_question_num - 1)
+                while offset_num in offset_list:
+                    offset_num = randint(0, total_question_num - 1)
+                offset_list.append(offset_num)
+                question_list.append(Question.query.offset(offset_num).first())
+        resp = make_response(render_template('practice_pages/general_practice.html', question_list = question_list))
+        for i in range(len(question_list)):
+            question = question_list[i]
+            resp.set_cookie("question_{}".format(i+1), str(question.id))
+        return resp
+    else:
+        login_id = int(request.cookies.get('user'))
+        user = User.query.filter_by(id=login_id).first()
+        grade = 0
+        for i in range(question_num):
+            question_id = int(request.cookies.get('question_{}'.format(i+1)))
+            question = Question.query.filter_by(id=question_id).first()
+            user_answer = {}
+            for k in range(len(question.question_type)):
+                user_answer['第{}小题'.format(k+1)] = ''.join(request.form.getlist('user_answer_{}_{}'.format(i+1, k+1)))
+            grade += question.get_grade(user_answer)
+            if question.is_correct(user_answer):
+                user.add_correct_list(question_id)
+            else:
+                user.add_wrong_list(question_id)
+        db.session.commit()
+        return render_template('practice_pages/show_result.html', grade=grade, user=user)
 
 
-@app.route('/student/special_practice')
-def student_special_practice():
+@app.route('/special_practice/<dict:question_config>', methods=['GET', 'POST'])
+def student_special_practice(question_config):
+    """
+    jump to special practice page
+    :return:
+    """
     if request.method == 'GET':
-        return render_template('practice_pages/special_practice.html')
+        question_list = []
+        lower_bund = 20
+        for question_category in question_config.keys():
+            question_num = int(question_config[question_category])
+            questions = Question.query.filter_by(category=question_category)
+            total_question_num = questions.count()
+            question_num = question_num if question_num < total_question_num else total_question_num
+            if total_question_num <= lower_bund:  # 总问题数太少时
+                total_offset_list = [i for i in range(total_question_num)]
+                for i in range(question_num):
+                    offset_num = choice(total_offset_list)
+                    question_list.append(questions.offset(offset_num).first())
+                    total_offset_list.remove(offset_num)
+            else:  # 总问题数不少时
+                offset_list = []
+                for i in range(question_num):
+                    offset_num = randint(0, questions.count()-1)
+                    while offset_num in offset_list:
+                        offset_num = randint(0, questions.count() - 1)
+                    offset_list.append(offset_num)
+                    question_list.append(questions.offset(offset_num).first())
+        resp = make_response(render_template('practice_pages/special_practice.html', question_list = question_list, question_config=question_config))
+        for i in range(len(question_list)):
+            question = question_list[i]
+            resp.set_cookie("question_{}".format(i+1), str(question.id))
+        return resp
+    else:
+        login_id = int(request.cookies.get('user'))
+        user = User.query.filter_by(id=login_id).first()
+        i = 1
+        grade = 0
+        for question_category in question_config.keys():
+            question_num = int(question_config[question_category])
+            user_answer = {}
+            for j in range(question_num):
+                question_id = int(request.cookies.get('question_{}'.format(i)))
+                question = Question.query.filter_by(id=question_id).first()
+                for k in range(len(question.question_type)):
+                    user_answer['第{}小题'.format(k+1)] = request.form.get('user_answer_{}_{}'.format(i, k+1))
+                grade += question.get_grade(user_answer)
+                if question.is_correct(user_answer):
+                    user.add_correct_list(question_id)
+                else:
+                    user.add_wrong_list(question_id)
+                i += 1
+        db.session.commit()
+        return render_template('practice_pages/show_result.html', grade=grade, user=user)

@@ -3,5 +3,56 @@
     专项练习
 {% endblock %}
 {% block content %}
-    <h1>配置界面</h1>
+    <form role="form" action="{{ url_for('student_special_practice', question_config=question_config) }}" method="post">
+        {% for question in question_list %}
+            {{ question.question| safe }}
+            {% set outer_loop = loop %}
+            {% for char in question.question_type|list %}
+                {% if char=='s' %}
+                <div class="row">
+                <div class="form-group col-sm-3">
+                    <label class="col-sm-2">A</label>
+                    <input type="radio" name="user_answer_{{ outer_loop.index }}_{{ loop.index }}" value="A">
+                </div>
+                <div class="form-group col-sm-3">
+                    <label class="col-sm-2">B</label>
+                    <input type="radio" name="user_answer_{{ outer_loop.index }}_{{ loop.index }}" value="B">
+                </div>
+                <div class="form-group col-sm-3">
+                    <label class="col-sm-2">C</label>
+                    <input type="radio" name="user_answer_{{ outer_loop.index }}_{{ loop.index }}" value="C">
+                </div>
+                <div class="form-group col-sm-3">
+                    <label class="col-sm-2">D</label>
+                    <input type="radio" name="user_answer_{{ outer_loop.index }}_{{ loop.index }}" value="D">
+                </div>
+                </div>
+                {% elif char=='m' %}
+                <div class="row">
+                <div class="form-group col-sm-3">
+                    <label class="col-sm-2">A</label>
+                    <input type="checkbox" name="user_answer_{{ outer_loop.index }}_{{ loop.index }}" value="A">
+                </div>
+                <div class="form-group col-sm-3">
+                    <label class="col-sm-2">B</label>
+                    <input type="checkbox" name="user_answer_{{ outer_loop.index }}_{{ loop.index }}" value="B">
+                </div>
+                <div class="form-group col-sm-3">
+                    <label class="col-sm-2">C</label>
+                    <input type="checkbox" name="user_answer_{{ outer_loop.index }}_{{ loop.index }}" value="C">
+                </div>
+                <div class="form-group col-sm-3">
+                    <label class="col-sm-2">D</label>
+                    <input type="checkbox" name="user_answer_{{ outer_loop.index }}_{{ loop.index }}" value="D">
+                </div>
+                </div>
+                {% else %}
+                <div class="row">
+                    <input type="text" class="col-sm-6" name="user_answer_{{ outer_loop.index }}_{{ loop.index }}">
+                </div>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+        <input type="submit" value="交卷">
+    </form>
 {% endblock %}

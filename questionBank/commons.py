@@ -3,6 +3,9 @@ from datetime import datetime
 from enum import Enum
 from random import randrange
 
+
+DEFAULT_SUBJECT = '信息技术'  # this used for pre version
+
 grades_list = ("高{}".format(grade+1) for grade in range(3))
 classnums_list = ("{}班".format(classnum+1) for classnum in range(16))
 subject_lists = ("语文", "数学", "外语", "物理", "化学", "生物", "政治", "历史", "地理", "信息技术", "通用技术")
@@ -11,17 +14,23 @@ information_technology_question_category = ["01信息与信息技术专题", "02
                                             "09Flash专题", "10Word&OCR专题", "11GoldWave专题", "12流程图专题", "13公式函数专题",
                                             "14数论专题", "15文本分析专题", "16去重专题", "17数组应用专题", "18可能不可能专题", "19排序专题",
                                             "20对分专题", "21vb数据库", "22其他", "23Excel填空", "24flash填空", "25VB填空_学考"]
-
 subject_category_dict = {"信息技术": information_technology_question_category}   # used for store the subject categories
 # question_types = ["choose", "blanks"]
+question_types = ["单项选择题", "多项选择题", "填空题"]
 
-question_types = ["选择题", "填空题"]
 
 class QuestionTypes(Enum):
     """corresponding to attribute (question_type) of question model"""
 
     选择题 = "choose"
     填空题 = "blanks"
+
+
+# class GeneralPracticeConfig():
+#     question_nums = {}
+# general practice config
+LOWER_BOUND = 20
+DEFAULT_QUESTION_NUM = 10
 
 
 def gen_rnd_filename():

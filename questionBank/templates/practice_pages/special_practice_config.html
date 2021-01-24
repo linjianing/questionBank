@@ -1,0 +1,51 @@
+{% extends 'student_base.html' %}
+{% block subtitle %}
+    专项练习配置
+{% endblock %}
+{% block content %}
+    <form id="form" action="{{ url_for('student_special_practice_modified') }}" method="post">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 col-offset-1">类别</div>
+                <div class="col-sm-4">题目数量</div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+        {% for category in subject_category %}
+            <div class="row">
+                <div class="col-sm-4 col-offset-1">
+                    <input type="checkbox" name="category", value="{{ category }}">{{ category }}
+                </div>
+                <div class="col-sm-4">
+                    <input type="number" name="question_num_{{ loop.index }}"><br>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+        <input id="submit" class="btn" type="submit" name="submit" value="生成题目">
+
+    </form>
+{% endblock %}
+
+{% block js %}
+    {{ super() }}
+    <script type="text/javascript">
+        var question_category_num = 1;
+        $(document).ready(function(){
+            $("#add_question").click(function(){
+                var data_list = 'categorylist'
+                question_category_num += 1;
+                var question_category_name = 'category_' + question_category_num;
+                var question_category_text = '类别'
+                var question_category_num_name = 'question_num_' + question_category_num;
+                var question_category_num_text = '输入题目数量'
+                $("#submit").before($("<label for=" + question_category_name + ">" + question_category_text + "</label>"));
+                $("#submit").before($("<input id=" + question_category_name + " type='text' name=" + question_category_name + " list="+ data_list +" placeholder='请选择类别'><br>"));
+                $("#submit").before($("<label for=" + question_category_num_name + ">" + question_category_num_text + "</label>"));
+                $("#submit").before($("<input id=" + question_category_num_name + " type='number' name=" + question_category_num_name + "><br>"));
+            });
+        });
+    </script>
+{% endblock %}

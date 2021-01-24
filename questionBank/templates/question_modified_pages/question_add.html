@@ -11,7 +11,7 @@
 
 {% block content %}
 <div>
-    <form id="form" action="{{ url_for('add_question', question_num=0) }}" method="post">
+    <form id="form" action="{{ url_for('add_question', question_num=0, question_type='') }}" method="post">
         {{ form.question_category.label }}{{ form.question_category }}<br>
         {{ form.question_type.label }}{{ form.question_type }}<br>
         {{ form.question_body.label }}{{ form.question_body }}<br>
@@ -21,14 +21,17 @@
 
     <script type="text/javascript">
         var question_num = 0;
+        // this is used for identify sub-question type b : blank, s : single choice, m : mul choice
+        var question_type = "";
         $(document).ready(function(){
             $("#add_answer").click(function(){
                 question_num += 1;
+                var answer_name = 'answer'+question_num;
                 if ($("#question_type").val() == "填空题"){
-                    var answer_name = 'answer'+question_num
+                    question_type = question_type + "b";
                     $("#submit").before($("<input type='text' name=" + answer_name + "></input><br>"));
-                }else{
-                    var answer_name = 'answer'+question_num;
+                }else if($("#question_type").val() == "单项选择题"){
+                    question_type = question_type + "s"
                     $("#submit").before($("<label>A</label>"));
                     $("#submit").before($("<input type='radio' name=" + answer_name + " value='A'>"));
                     $("#submit").before($("<label>B</label>"));
@@ -37,11 +40,21 @@
                     $("#submit").before($("<input type='radio' name=" + answer_name + " value='C'>"));
                     $("#submit").before($("<label>D</label>"));
                     $("#submit").before($("<input type='radio' name=" + answer_name + " value='D'><br>"));
+                }else{
+                    question_type = question_type + "m"
+                    $("#submit").before($("<label>A</label>"));
+                    $("#submit").before($("<input type='checkbox' name=" + answer_name + " value='A'>"));
+                    $("#submit").before($("<label>B</label>"));
+                    $("#submit").before($("<input type='checkbox' name=" + answer_name + " value='B'>"));
+                    $("#submit").before($("<label>C</label>"));
+                    $("#submit").before($("<input type='checkbox' name=" + answer_name + " value='C'>"));
+                    $("#submit").before($("<label>D</label>"));
+                    $("#submit").before($("<input type='checkbox' name=" + answer_name + " value='D'><br>"));
                 }
             });
 
             $("#submit").click(function(){
-                var new_url = "/add_question/" + question_num
+                var new_url = "/add_question/" + question_num + "/" + question_type;
                 $("#form").attr('action', new_url);
                 $("#form").submit();
             })

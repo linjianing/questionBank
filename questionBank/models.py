@@ -4,7 +4,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from questionBank import db
 
 
-
 # 模型类
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
@@ -21,6 +20,14 @@ class User(db.Model, UserMixin):
 
     def validate_password(self, password):
         return check_password_hash(self.password_hash, password)
+
+    def add_correct_list(self, question_id):
+        if question_id not in self.correct_list:
+            self.correct_list.append(question_id)
+
+    def add_wrong_list(self, question_id):
+        if question_id not in self.wrong_list:
+            self.wrong_list.append(question_id)
 
 
 class Teacher(db.Model, UserMixin):
@@ -47,4 +54,20 @@ class Question(db.Model):
     grade = db.Column(db.PickleType)
 
     def get_grade(self, answer):
-        pass
+        grade = 0
+        for k in answer:
+            if self.answer[k] == answer[k]:
+                grade = grade + self.grade[k]
+        return grade
+
+    def is_correct(self, answer):
+        for k in answer:
+            if self.answer[k] != answer[k]:
+                return False
+        return True
+
+
+# class Practice(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     user_id = db.Column(db.Integer)
+#     time = db.Column()
